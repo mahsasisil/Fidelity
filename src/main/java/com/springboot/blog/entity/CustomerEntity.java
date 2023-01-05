@@ -12,7 +12,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(
-        name = "customers", uniqueConstraints = {@UniqueConstraint(columnNames = {"first_name","last_name"})}
+        name = "customers", uniqueConstraints = {@UniqueConstraint(columnNames = {"firstName","lastName"})}
 )
 public class CustomerEntity {
 
@@ -22,12 +22,12 @@ public class CustomerEntity {
     )
     private Long id;
 
-    @Column(name = "first_name", nullable = false)
-    private String title;
+    @Column(name = "firstName", nullable = false)
+    private String firstName;
 
-    @Column(name = "last_Name", nullable = false)
-    private String description;
+    @Column(name = "lastName", nullable = false)
+    private String lastName;
 
-    @Column(name = "job_title", nullable = true)
-    private String content;
+    @Column(name = "jobTitle", nullable = true)
+    private String jobTitle;
 }

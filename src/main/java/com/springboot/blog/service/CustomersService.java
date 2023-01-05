@@ -1,17 +1,21 @@
 package com.springboot.blog.service;
 
-import com.springboot.blog.dto.PostDTO;
+import com.springboot.blog.dto.CustomerDTO;
 
 import java.util.List;
 
 public interface CustomersService {
-    PostDTO createPost(PostDTO postDTO);
 
-    List<PostDTO> getAllPosts();
+    CustomerDTO getPostByFirstName(String firstName);
 
-    PostDTO getPostById(long id);
+    CustomerDTO createPost(CustomerDTO customerDTO);
 
-    PostDTO updatePost(PostDTO postDTO, long id);
+    List<CustomerDTO> getAllPosts();
+
+    CustomerDTO getPostById(long id);
+
+    CustomerDTO updatePost(CustomerDTO customerDTO, long id);
 
     void deletePostById(long id);
+
 }
